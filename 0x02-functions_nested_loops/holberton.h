@@ -10,5 +10,8 @@ void print_alphabet_x10(void);
 /* For: 3-islower.c */
 int _islower(int c);
 
-/* For: 4-isalpha */
+/* For: 4-isalpha.c */
 int _isalpha(int c);
+
+/* For: 5-sign.c */
+int print_sign(int n);
