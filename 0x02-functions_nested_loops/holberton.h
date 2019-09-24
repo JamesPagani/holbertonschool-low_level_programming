@@ -15,3 +15,6 @@ int _isalpha(int c);
 
 /* For: 5-sign.c */
 int print_sign(int n);
+
+/* For: 6-abs.c */
+int _abs(int);
