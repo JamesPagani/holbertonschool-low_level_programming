@@ -9,3 +9,6 @@ void print_alphabet_x10(void);
 
 /* For: 3-islower.c */
 int _islower(int c);
+
+/* For: 4-isalpha */
+int _isalpha(int c);
