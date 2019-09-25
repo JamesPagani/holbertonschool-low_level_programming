@@ -31,5 +31,9 @@ void times_table(void);
 /* For: 10-add.c */
 int add(int, int);
 
-/* For: 11-print_to_98.c*/
+/* For: 11-print_to_98.c */
 void print_to_98(int n);
+
+/* For: 100-times_table.c */
+void print_times_table(int n);
+
