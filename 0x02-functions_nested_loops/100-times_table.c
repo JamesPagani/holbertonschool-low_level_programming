@@ -15,13 +15,13 @@ void print_times_table(int n)
 
 	if (n > 15 || n < 0)
 	{
-		_putchar(1);
+
 	}
 	else
 	{
-		while (num1 < n)
+		while (num1 <= n)
 		{
-			while (num2 < n)
+			while (num2 <= n)
 			{
 				result = num1 * num2;
 
@@ -48,7 +48,7 @@ void print_times_table(int n)
 					_putchar(result % 10 + '0');
 				}
 
-				if (num2 != 9)
+				if (num2 != n)
 				{
 					_putchar(',');
 					_putchar(' ');
