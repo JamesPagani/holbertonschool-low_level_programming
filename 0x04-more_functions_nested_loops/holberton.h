@@ -27,3 +27,6 @@ void print_diagonal(int n);
 
 /* For 8-print_square.c */
 void print_square(int size);
+
+/* For 10-print_triangle.c */
+void print_triangle(int size);
