@@ -21,3 +21,6 @@ void more_numbers(void);
 
 /* For 6-print_line.c */
 void print_line(int n);
+
+/* For 7-print_diagonal.c */
+void print_diagonal(int n);
