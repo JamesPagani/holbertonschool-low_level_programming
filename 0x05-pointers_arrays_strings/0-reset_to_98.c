@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - Updates the value of a variable using a pointer
- * @*n: Pointer to an interger of the value to update
+ * @n: Pointer to an interger of the value to update
  *
  * Return: Nothing
  */
