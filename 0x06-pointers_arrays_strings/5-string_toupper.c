@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _string_toupper - Turns all alphabetic characters in a string to uppercase
+ * string_toupper - Turns all alphabetic characters in a string to uppercase
  * @src: Source string
  *
  * Return: Uppercased string
