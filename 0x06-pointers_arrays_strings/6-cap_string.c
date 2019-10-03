@@ -15,16 +15,23 @@ char *cap_string(char *s)
 
 	count = 0;
 
+	if (*(s + 0) >= 'a' && *(s + 0) <= 'z')
+	{
+		*(s + 0) -= 32;
+	}
+
 	while (*(s + count) != '\0')
 	{
 		if (*(s + count) >= 'a' && *(s + count) <= 'z')
 		{
-			for (l = 0; l < 13; l++)
+			l = 0;
+			while (l < 13)
 			{
 				if (*(s + (count - 1)) == sepa_ls[l])
 				{
 					*(s + count) -= 32;
 				}
+				l++;
 			}
 		}
 		count++;
