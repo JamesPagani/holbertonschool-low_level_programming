@@ -4,6 +4,7 @@
  * _strncat - Concatenates a string up to the n byte
  * @dest: String to concatenate
  * @src: String used to concatenate
+ * @n: Amount of bytes to concatenate
  *
  * Return: Destination string (dest)
  */
