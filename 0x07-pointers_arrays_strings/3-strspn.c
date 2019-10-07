@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * _strspn - Calculates the length of the first segment of characters that
  * consists only of a specific set of characters
@@ -11,45 +10,31 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i;
-	int j;
-	int span;
-	int cond;
+	int i, j, span, cond;
 
-	i = 0;
-	span = 0;
-	cond = 0;
+	span = cond = 0;
 
-	while (s[i] != '\0' && !cond)
+	for (i = 0; s[i] != '\0' && cond != 2; i++)
 	{
 		for (j = 0; accept[j] != '\0' && !cond; j++)
 		{
-			if (s[i] == accept[j])
+			if (s[i] == accept[j] && cond == 0)
 			{
 				cond++;
 				span++;
+				break;
 			}
-		}
-		i++;
-	}
-
-	while (s[i] != '\0' && cond)
-	{
-		for (j = 0; accept[j] != '\0' && cond; j++)
-		{
-			if (s[i] == accept[j])
+			else if (s[i] == accept[j] && cond == 1)
 			{
 				span++;
 				break;
 			}
-
-			if (accept[j + 1] == '\0' && s[i] != accept[j])
+			else if (s[i] != accept[j] && accpet[j + 1] == '\0')
 			{
-				cond--;
+				cond++;
+				break;
 			}
 		}
-		i++;
 	}
-
 	return (span);
 }
