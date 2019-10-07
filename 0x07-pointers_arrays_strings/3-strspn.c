@@ -29,7 +29,7 @@ unsigned int _strspn(char *s, char *accept)
 				span++;
 				break;
 			}
-			else if (s[i] != accept[j] && accpet[j + 1] == '\0')
+			else if (s[i] != accept[j] && accept[j + 1] == '\0')
 			{
 				cond++;
 				break;
