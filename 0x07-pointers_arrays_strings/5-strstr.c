@@ -29,11 +29,13 @@ char *_strstr(char *haystack, char *needle)
 				}
 			}
 		}
+		if (cond == 2)
+			break;
 		haystack++;
 	}
 
 	if (cond != 2)
 		return ('\0');
 
-	return (haystack - 1);
+	return (haystack);
 }
