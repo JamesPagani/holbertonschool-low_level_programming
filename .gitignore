@@ -3,3 +3,5 @@ main*.c
 \#*
 a.out
 _putchar.c
+*.o
+0x09-static_libraries/*
