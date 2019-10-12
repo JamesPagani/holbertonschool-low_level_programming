@@ -13,8 +13,10 @@ int num_check(char *s)
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		if  (*(s + i) < 48 && *(s + i) > 57)
+		if  (!(*(s + i) >= 48 && *(s + i) <= 57))
+		{
 			return (0);
+		}
 	}
 	return (1);
 }
@@ -39,9 +41,9 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (i = 0; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			if (num_check(argv[i]))
+			if (num_check(argv[i]) == 1)
 			{
 				sum = sum + atoi(argv[i]);
 			}
