@@ -2,8 +2,8 @@
 #include <stdio.h>
 /**
  * main - Entry point. prints all arguments passed
- * @argc - Amount of arguments passed
- * @argv - String array of arguments passed
+ * @argc: Amount of arguments passed
+ * @argv: String array of arguments passed
  * Return: 0 if successful, anything else if error
  */
 
