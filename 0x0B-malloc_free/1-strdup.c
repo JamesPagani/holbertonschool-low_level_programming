@@ -19,7 +19,6 @@ char *_strcpy(char *dest, char *src)
 		*(dest + i) = *(src + i);
 		i++;
 	}
-	
 
 	return (dest);
 }
@@ -57,9 +56,9 @@ char *_strdup(char *str)
 	char *nstr;
 	int leng;
 
-	leng = _strlen(str) + 1;
 	if (str == NULL)
 		return (NULL);
+	leng = _strlen(str) + 1;
 	nstr = (char *) malloc(sizeof(char) * leng);
 	if (nstr == NULL)
 		return (NULL);
