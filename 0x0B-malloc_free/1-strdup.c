@@ -1,6 +1,31 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
+ * _strcpy - Copies the string from a source to a destination
+ * @dest: Where to copy the string
+ * @src: String to copy
+ *
+ * Return: dest's pointer
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+
+	while (*(src + i) != '\0')
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+	*(dest + i) = '\0';
+
+	return (dest);
+}
+
+
+/**
  * _strlen - Counts the lenght of the string
  * @s: String to analyze
  *
@@ -30,18 +55,15 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	char *nstr;
-	int i, leng;
+	int leng;
 
-	leng = _strlen(str);
+	leng = _strlen(str) + 1;
 	if (str == NULL)
 		return (NULL);
 	nstr = (char *) malloc(sizeof(char) * leng);
 	if (nstr == NULL)
 		return (NULL);
 
-	for (i = 0; i < leng; i++)
-	{
-		nstr[i] = str[i];
-	}
+	_strcpy(nstr, str);
 	return (nstr);
 }
