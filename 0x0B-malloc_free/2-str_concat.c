@@ -47,6 +47,7 @@ char *_strcat(char *dest, char *src)
 		i++;
 		j++;
 	}
+	*(dest + i) = '\0';
 
 	return (dest);
 }
@@ -87,6 +88,15 @@ char *str_concat(char *s1, char *s2)
 {
 	char *s3;
 	int leng1, leng2;
+
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 
 	leng1 = _strlen(s1);
 	leng2 = _strlen(s2);
