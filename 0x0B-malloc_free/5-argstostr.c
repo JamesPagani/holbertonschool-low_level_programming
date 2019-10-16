@@ -82,6 +82,6 @@ char *argstostr(int ac, char **av)
 	{
 		out = _strcat(out, av[i]);
 	}
-
+	out[leng - 1] = '\0';
 	return (out);
 }
