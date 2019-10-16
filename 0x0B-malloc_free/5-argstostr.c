@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _strlen - Counts the lenght of the string
  * @s: String to analyze
@@ -11,6 +12,7 @@ int _strlen(char *s)
 {
 	int count;
 
+	count = 0;
 	while (*s != '\0')
 	{
 		count++;
@@ -74,7 +76,7 @@ char *argstostr(int ac, char **av)
 		leng = leng + _strlen(av[i]) + 1;
 	}
 
-	out = (char *) malloc(1 + leng * sizeof(char));
+	out = (char *) malloc(leng * sizeof(char));
 	if (out == NULL)
 		return (NULL);
 
