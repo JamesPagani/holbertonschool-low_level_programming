@@ -17,5 +17,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char *_strncat(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
+char *_memset(char *s, char b, unsigned int n);
 
 #endif
