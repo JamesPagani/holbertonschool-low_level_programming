@@ -14,5 +14,8 @@ int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 /* 0x0C backup functions */
+char *_strncat(char *dest, char *src, int n);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
 
 #endif
