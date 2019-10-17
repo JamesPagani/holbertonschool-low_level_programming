@@ -18,5 +18,6 @@ char *_strncat(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 char *_memset(char *s, char b, unsigned int n);
+int *array_fill(int *arr, int min, int max);
 
 #endif
