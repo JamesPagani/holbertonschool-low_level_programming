@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * _memset - Fills memory with a constant byte
+ * _zero_memory - Fills memory with a constant byte (fills it with zeroes)
  * @s: Where to fill
  * @b: Byte used to fill
  * @n: How many bytes to fill
@@ -9,7 +9,7 @@
  * Return: Pointer to the filled memory area
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_zero_memory(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
@@ -42,6 +42,6 @@ void *_calloc(unsigned int nmeb, unsigned int size)
 	if (arr == NULL)
 		return (NULL);
 
-	arr = _memset(arr, 0, size);
+	arr = _zero_memory(arr, 0, size);
 	return (arr);
 }
