@@ -31,14 +31,14 @@ char *_zero_memory(char *s, char b, unsigned int n)
  * Return: Pointer to the allocated memory space
  */
 
-void *_calloc(unsigned int nmeb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *arr;
 
-	if (nmeb == 0 || size == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	arr = malloc(nmeb * size);
+	arr = malloc(nmemb * size);
 	if (arr == NULL)
 		return (NULL);
 
