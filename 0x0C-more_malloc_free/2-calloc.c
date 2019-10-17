@@ -33,15 +33,15 @@ char *_memset(char *s, char b, unsigned int n)
 
 void *_calloc(unsigned int nmeb, unsigned int size)
 {
-	char *out;
+	char *arr;
 
 	if (nmeb == 0 || size == 0)
 		return (NULL);
 
-	out = malloc(nmeb * size);
-	if (out == NULL)
+	arr = malloc(nmeb * size);
+	if (arr == NULL)
 		return (NULL);
 
-	_memset(out, 0, size);
-	return (out);
+	arr = _memset(arr, 0, size);
+	return (arr);
 }
