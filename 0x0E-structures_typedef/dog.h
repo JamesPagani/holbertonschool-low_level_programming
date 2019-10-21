@@ -1,16 +1,12 @@
 #ifndef DOG_H
 #define DOG_H
-
-/* Holberton's putchar */
-int _putchar(char c);
-
 /**
- * struct dog - General structure of a doggo
+ * struct dog - General structure of a dog
  * @name: Name of the dog
- * @age: Age of the dog (in human years?)
- * @owner: Name of the dog's owner
+ * @age: Age of the dog
+ * @owner: Owner of the dog
  *
- * Description: D O G G O
+ * Description: None
  */
 struct dog
 {
@@ -18,5 +14,14 @@ struct dog
 	float age;
 	char *owner;
 };
+
+/* Holberton's putchar */
+int _putchar(char c);
+
+/* 0x0E Functions */
+void init_dog(struct dog *d, char *name, float age, char *owner);
+/* void print_dog(struct dog *d); */
+/* dog_t *new_dog(char *name, float age, char *owner); */
+/* void free_dog(dog_t *d); */
 
 #endif
