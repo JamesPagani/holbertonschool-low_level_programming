@@ -17,6 +17,8 @@ struct dog
 	char *owner;
 };
 
+typedef struct dog dog_t;
+
 /* Holberton's putchar */
 int _putchar(char c);
 
