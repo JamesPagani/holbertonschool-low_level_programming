@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	if (oper == op_div && num2 == 0)
+	if ((oper == op_div || oper == op_mod) && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
