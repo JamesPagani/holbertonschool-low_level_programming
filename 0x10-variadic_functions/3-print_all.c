@@ -35,25 +35,28 @@ void print_all(const char * const format, ...)
 			{
 			case 'c':
 				printf("%s", sep);
+				sep = ", ";
 				printf("%c", va_arg(in, int));
 				break;
 			case 'i':
 				printf("%s", sep);
+				sep = ", ";
 				printf("%d", va_arg(in, int));
 				break;
 			case 'f':
 				printf("%s", sep);
+				sep = ", ";
 				printf("%f", va_arg(in, double));
 				break;
 			case 's':
 				printf("%s", sep);
+				sep = ", ";
 				printf("%s", s_check(va_arg(in, char *)));
 				break;
 			}
-			sep = ", ";
 			i++;
 		}
 		va_end(in);
-		printf("\n");
 	}
+	printf("\n");
 }
