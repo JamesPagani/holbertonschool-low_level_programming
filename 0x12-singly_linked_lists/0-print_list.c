@@ -9,7 +9,7 @@ size_t print_list(const list_t *h)
 {
 	size_t e_count;
 
-	while(h != NULL)
+	while (h != NULL)
 	{
 		printf("[%d] %s\n", h->len, h->str);
 		e_count++;
