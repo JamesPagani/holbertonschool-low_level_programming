@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 /**
  * _strlen - Counts the lenght of the string
  * @s: String to analyze
@@ -50,6 +50,9 @@ unsigned int binary_to_uint(const char *b)
 	int i = 0;
 	int lngt = _strlen(b);
 	int exp = lngt - 1;
+
+	if (b == NULL)
+		return (0);
 
 	while (*(b + i) != '\0')
 	{
