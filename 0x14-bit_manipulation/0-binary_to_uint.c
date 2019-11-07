@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 /**
  * _strlen - Counts the lenght of the string
  * @s: String to analyze
@@ -21,7 +21,7 @@ int _strlen(const char *s)
 }
 
 /**
- * _pow_recursion - Delivers the result of a number x to the power of y
+ * _pow - Delivers the result of a number x to the power of y
  * @x: Base
  * @y: Exponent
  * Return: x to the power of y. If y is lower than 0, it returns -1.
