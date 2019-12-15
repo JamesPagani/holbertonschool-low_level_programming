@@ -8,6 +8,7 @@
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *node;
+
 	if (head != NULL)
 	{
 		node = head;
