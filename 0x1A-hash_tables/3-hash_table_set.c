@@ -2,7 +2,7 @@
 /**
  * insert_h_node - Insert a new hash node into the given index of the table
  * @head: Head of a hash table linked list
- * @node: New node to insert
+ * @new: New node to insert
  * Return: Address of the new element
  */
 
