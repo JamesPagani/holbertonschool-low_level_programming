@@ -3,7 +3,7 @@
  * insert_h_node - Insert a new hash node into the given index of the table
  * @head: Head of a hash table linked list
  * @new: New node to insert
- * Return: Address of the new element
+ * Return: Address of the new element. NULL on failure
  */
 
 hash_node_t *insert_h_node(hash_node_t **head, hash_node_t *new)
@@ -46,21 +46,21 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 		return (0);
-	new->key = malloc(1 + strlen(key) * sizeof(char));
-	if (key == NULL)
+	new->key = malloc((1 + strlen(key)) * sizeof(char));
+	if (new->key == NULL)
 	{
 		free(new);
 		return (0);
 	}
 	strcpy(new->key, key);
-	new->value = malloc(1 + strlen(value) * sizeof(char));
-	new->value = strdup(value);
-	if (value == NULL)
+	new->value = malloc((1 + strlen(value)) * sizeof(char));
+	if (new->value == NULL)
 	{
 		free(new->key);
 		free(new);
 		return (0);
 	}
+	new->value = strdup(value);
 	array = ht->array[h_index];
 	insert_h_node(&array, new);
 
