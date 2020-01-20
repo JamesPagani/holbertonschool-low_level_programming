@@ -1,19 +1,38 @@
 #include "hash_tables.h"
 /**
  * insert_h_node - Insert a new hash node into the given index of the table
- * @head: Head of a hash table linked list
- * @new: New node to insert
+ * @h: Head of a hash table linked list
+ * @k: Key of the new hash element
+ * @v: Value asociated with @key
  * Return: Address of the new element. NULL on failure
  */
 
-hash_node_t *insert_h_node(hash_node_t **head, hash_node_t *new)
+hash_node_t *insert_h_node(hash_node_t **h, const char *k, const char *v)
 {
-	hash_node_t *node = *head;
+	hash_node_t *node = *h;
+	hash_node_t *new;
 
-	if (head == NULL || *head == NULL)
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
+		return (NULL);
+	new->key = malloc((1 + strlen(k)) * sizeof(char));
+	if (new->key == NULL)
 	{
-		node = new;
+		free(new);
+		return (NULL);
 	}
+	new->key = strdup(k);
+	new->value = malloc((1 + strlen(v)) * sizeof(char));
+	if (new->value == NULL)
+	{
+		free(new->key);
+		free(new);
+		return (NULL);
+	}
+	new->value = strdup(v);
+	new->next = NULL;
+	if (*h == NULL)
+		*h = new;
 	else
 	{
 		while (node->next != NULL)
@@ -34,8 +53,6 @@ hash_node_t *insert_h_node(hash_node_t **head, hash_node_t *new)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int h_index;
-	hash_node_t *new;
-	hash_node_t *array;
 
 	if (ht == NULL || ht->size == 0)
 		return (0);
@@ -45,26 +62,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	h_index = key_index((const unsigned char *)key, ht->size);
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
+	if (insert_h_node(&(ht->array[h_index]), key, value) == NULL)
 		return (0);
-	new->key = malloc((1 + strlen(key)) * sizeof(char));
-	if (new->key == NULL)
-	{
-		free(new);
-		return (0);
-	}
-	strcpy(new->key, key);
-	new->value = malloc((1 + strlen(value)) * sizeof(char));
-	if (new->value == NULL)
-	{
-		free(new->key);
-		free(new);
-		return (0);
-	}
-	new->value = strdup(value);
-	array = ht->array[h_index];
-	insert_h_node(&array, new);
 
 	return (1);
 }
