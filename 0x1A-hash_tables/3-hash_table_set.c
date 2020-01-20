@@ -41,6 +41,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	if (key == NULL || strlen(key) == 0)
 		return (0);
+	if (ht->size == 0)
+		return (0);
 
 	h_index = key_index((const unsigned char *)key, ht->size);
 	new = malloc(sizeof(hash_node_t));
