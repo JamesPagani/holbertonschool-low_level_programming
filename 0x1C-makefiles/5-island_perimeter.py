@@ -12,13 +12,14 @@ We can assume the following things are true:
 def island_perimeter(grid):
     """Calculate the perimeter of an island."""
     total_p = 0
-
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            if grid[i][j] == 1:
-                total_p += sum_perim(grid, i, j)
+    if grid is not None or grid != [[]]:
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j] == 1:
+                    total_p += sum_perim(grid, i, j)
 
     return total_p
+
 
 def sum_perim(grid, i, j):
     """Sum the perimeter on the current land square."""
